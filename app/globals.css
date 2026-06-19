@@ -1,26 +1,32 @@
-@import "tailwindcss";
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg:            #0A0A0F;
+    --bg2:           #0f0f18;
+    --bg3:           #13131f;
+    --glass:         rgba(255,255,255,0.04);
+    --glass-border:  rgba(255,255,255,0.08);
+    --glass-hover:   rgba(255,255,255,0.07);
+    --text:          #f0eff8;
+    --text-muted:    rgba(240,239,248,0.55);
+    --text-faint:    rgba(240,239,248,0.30);
+    --violet:        #7C3AED;
+    --violet-light:  #a78bfa;
+    --cyan:          #06B6D4;
+    --cyan-light:    #67e8f9;
+    --blue:          #3B82F6;
+    --emerald:       #10B981;
+    --amber:         #F59E0B;
+    --rose:          #F43F5E;
+    --grad-text:     linear-gradient(135deg, #a78bfa 0%, #67e8f9 50%, #93c5fd 100%);
+    --grad-btn:      linear-gradient(135deg, #7C3AED, #06B6D4);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
